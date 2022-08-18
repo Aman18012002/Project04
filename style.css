@@ -8,16 +8,31 @@
   padding: 0;
 }
 header{
-  background-image: linear-gradient(#4718FE,#4A1CFD);
+  background-image: linear-gradient(#4718FE,#4A1CFD); 
+
+}
+@media (max-width:480px) {
+.logo{
+  width: 50%;
+}
+.header-image{
+  margin-top: 0rem;
+}
+
 }
 
 nav{
   display: flex;
-  justify-content: flex-end;
-  padding-top: 3rem;
- 
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  
   /* padding-left: 3rem; */
 }
+.top-logo{
+  align-items: flex-start;
+}
+
 .nav-item,.nav-item-active{
   color: #fff;
   margin-right: 3rem;
@@ -35,13 +50,14 @@ nav{
 .header-text{
   padding: 4rem;
   margin-top: 4rem;
+ 
 }
 .heading{
   font-size: 2.5rem;
   color: #fff;
- 
- 
 }
+
+
 .para{
   font-size: 1.2rem;
   color: #fff;
@@ -52,31 +68,48 @@ nav{
 .logo{
   margin-left: 4rem;
 }
+.Herosection{
+  display: flex;
+  justify-content: space-between;
+}
 .header-image{
- position: absolute;
- top: 8rem;
- right: 0;
+  margin-top: 4rem;
+}
+.header-image{
+  width: 100%;
+  height: 100%;
+}
+/* Responsive Work */
+
+@media (max-width:1210px){
+  html{
+    font-size: 85%;
+  }
+}
+@media (max-width:281px){
+  html{
+    font-size: 55%;
+  }
+}
+@media (max-width:1090px){
+  .Herosection{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+}
+@media (max-width:840px){
+.nav-item{
+  display: none;
+}  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.companies{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
 /* AfterApi Section Design */
@@ -84,6 +117,7 @@ nav{
 .cards{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
  
 }
 .card{
@@ -108,56 +142,43 @@ nav{
   display: flex;
   margin-left: 3rem;
   margin-right: 3rem;
+  flex-wrap: wrap;
   justify-content: space-between;
   /* align-items: center;
   justify-content: space-around; */
 }
+/* Responsive */
+
+@media (max-width:540px){
+  .blog-card{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .blog-card{
   display: flex;
+  margin-bottom: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   
 }
 .name-with-img{
  display: flex;
- justify-content: space-evenly;
+ justify-content: center;
  align-items: center;
 }
-
-
 .blog-content{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.blog-1,.blog-2{
-  margin-bottom: 1rem;
+  padding: 1rem;
 }
 .seprate_part_bottom{
-
-  display: flex;
-  align-items: center;
-  margin-left: 1.5rem;
-  margin-top: 1rem;
-  /* justify-content: space-around; */
-}
-.seprate_part{
-  height: 18rem;
-  width: 25rem;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
- /* FAQ SECTION  */
-
- .faq-section{
-  background-color: #E9EDFF;
-  display: flex;
-  margin-top: 2rem;
-  justify-content: space-between;
-
- }
- .faq-content{
-  margin-left: 3rem;
+ display: flex;
+ align-items: center;
+ margin-left: 1.5rem;
+ margin-top: 1rem;
  
- }
-.btncontact{
+}
+ /*  */
+ .btncontact{
   background-color: #5A31FC;
   color: #fff;
   border: 1rem;
@@ -167,24 +188,33 @@ nav{
   padding-top:.5rem;
   padding-bottom:.5rem;
 }
+
+ input{
+  width: 50%;
+ }
+
 .download-section{
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+ padding: 2rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .download-content{
   margin-left: 3rem;
+  
 }
 .download-email{
   margin-right: 3rem;
+
 }
 input{
   background-color: #E9EDFF;
   border: none;
+
+  border: 2px solid #4A1CFD;
   padding-left: 3rem;
-  padding-right: 10rem; 
+  padding-right: 8rem; 
   padding-top:.5rem; 
   padding-bottom:.5rem; 
   border-radius: 2rem;
@@ -204,25 +234,33 @@ input{
 .footer-section{
   background-color: #5A31FC;
   display: flex;
+  flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
    padding: 4rem;
 
 }
+@media (max-width:840px){
+.list{
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+}
  .list{
   display: flex;
   list-style: none;
+  gap: 2rem;
  }
 .footer-logo{
   margin-bottom: 1rem;
 }
  .list-items{
  color: #fff;
- margin-right: 3rem;
+  
  }
- .footer-right{
-  margin-left: 2rem; 
- }
+
  .footer-logos{
   margin-right: 1rem;
  }
@@ -230,6 +268,7 @@ input{
   display: flex;
   list-style: none;
   margin-top: 1rem;
+  gap: 2rem;
  }
 .dark{
   margin-bottom: 1rem;
@@ -253,3 +292,53 @@ input{
   color: #000000;
   font-weight: 700;
 }
+
+
+
+/* Faq Section */
+
+.faqwallpaper{
+  width: 100%;
+  height: 100%;
+}
+.faq-section{
+  background-color: #E9EDFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.faq-content{
+  margin-left: 2rem;
+}
+@media (max-width:1023px){
+ .faq-section{
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1rem;
+ } 
+ .faq-content{
+  margin-left: 0rem;
+}
+}
+
+
+.download-content{
+  margin-bottom: 1rem;
+}
+@media (max-width:660px){
+ .download-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .download-content{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.download-email{
+  margin-left: 2px;
+  margin-right: 2px;
+  
+}
+}  
